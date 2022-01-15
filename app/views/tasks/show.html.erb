@@ -1,0 +1,19 @@
+<div class="details">
+  <h2><%= @task.title %></h2>
+  <p><%= @task.details %></p>
+  <p>
+    <% if @task.completed? %>
+      <em><%= 'Completed!' %></em>
+    <% else %>
+      <em><%= 'Not completed!' %></em>
+    <% end %>
+  </p>
+</div>
+
+<div class="links">
+  <%= link_to 'Edit this task', edit_path %>
+</div>
+
+<div class="links">
+  <%= link_to 'Back to list', tasks_path %>
+</div>
